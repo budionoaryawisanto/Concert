@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: asap;
+    src: url('./assets/fonts/Asap-VariableFont_wdth\,wght.ttf');
+    font-family: acme;
+    src: url('./assets/fonts/Acme-Regular.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: asap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.background-start{
+    background-image: url('./assets/images/background-start.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.App-link {
-  color: #61dafb;
+.container-form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    border: 1px solid white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.header-login{
+    font-family: acme;
+    font-size: 96px;
+    color: white;
+    text-align: center;
+}
+
+.sub-header-login{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    color: #ce164d;
+    margin-bottom: 40px;
+}
+
+.container-optionalform{
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.option-form{
+    width: 50%;
+    height: 28px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    line-height: 28px;
+    border-radius: 7px;
+    color: black;
+}
+
+.optionform-active{
+    background-color: #636366;
+    color: white;
+}
+
+.form-message{
+    text-align: center;
+    color: white;
+}
+
+.container-field{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input{
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 17px;
+    border: none;
+    padding: 0px 10px;
+    color: white;
+    background-color: rgba(28, 28, 30, 0.7);
+}
+
+input:focus{
+    outline: none;
+}
+
+.controls{
+    position: relative;
+}
+
+.icon-form{
+    width: 27px;
+    position: absolute;
+    right: 14px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.button-login{
+    width: 40%;
+    height: 35px;
+    border-radius: 8px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    margin: auto;
+    background-color: #FC1055;
+    color: black;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.button-login:hover{
+    translate: 0px -5px;
 }
