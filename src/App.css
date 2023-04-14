@@ -1,6 +1,6 @@
 @font-face {
     font-family: asap;
-    src: url('./assets/fonts/Asap-VariableFont_wdth\,wght.ttf');
+    src: url('./assets/fonts/Asap-Regular.ttf');
     font-family: acme;
     src: url('./assets/fonts/Acme-Regular.ttf');
 }
@@ -21,6 +21,8 @@
     display: flex;
 }
 
+/* Login page start */
+
 .background-start{
     background-image: url('./assets/images/background-start.png');
     background-position: center;
@@ -31,7 +33,7 @@
 .container-form{
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     margin: auto;
     border: 1px solid white;
 }
@@ -45,15 +47,21 @@
 .header-login{
     font-family: acme;
     font-size: 96px;
-    color: white;
+    letter-spacing: -0.41px;
+    color: transparent;
     text-align: center;
+    letter-spacing: 4px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
 }
 
 .sub-header-login{
     text-align: center;
     font-size: 17px;
+    letter-spacing: 0.59px;
     font-weight: 700;
-    color: #ce164d;
+    color: #eb0348;
     margin-bottom: 40px;
 }
 
@@ -96,6 +104,7 @@ input{
     height: 44px;
     border-radius: 8px;
     font-size: 17px;
+    letter-spacing: -0.41px;
     border: none;
     padding: 0px 10px;
     color: white;
@@ -118,11 +127,20 @@ input:focus{
     cursor: pointer;
 }
 
-.button-login{
+.container-loginterms{
+    display: flex;
     width: 40%;
+    flex-direction: column;
+    margin: auto;
+}
+
+.button-login{
+    width: 100%;
     height: 35px;
     border-radius: 8px;
     font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.41px;
     outline: none;
     border: none;
     margin: auto;
@@ -130,8 +148,48 @@ input:focus{
     color: black;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    margin-bottom: 40px;
 }
 
 .button-login:hover{
     translate: 0px -5px;
+}
+
+.container-terms{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.terms{
+    font-size: 17px;
+    color: white;
+    letter-spacing: -0.41px;
+}
+
+.text-button{
+    color: #eb0348;
+    text-decoration: underline;
+    text-decoration-color: #eb0348;
+    cursor: pointer;
+}
+
+/* Login page end */
+
+
+/* Terms modal start */
+
+.container-modal-terms{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 99;
+    background-color: black;
+}
+
+.title-modal-terms{
+    width: 100%;
+    height: 99px;
+    background-color: #2C2C2E;
 }

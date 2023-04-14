@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import api from '../models/api'
 import visibleIcon from '../assets/icons/visible.png'
 import unvisibleIcon from '../assets/icons/unvisible.png'
+import Terms from '../modals/Terms'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -32,7 +33,7 @@ const Login = () => {
     <div className="body background-start">
         <div className="container-form">
         <form action="" className='form' onSubmit={Auth}>
-            <p className='header-login'>KPOP</p>
+            <p className='header-login'>KPoP</p>
             <p className='sub-header-login'>CONCERTS</p>
             <div className="container-optionalform">
                 <div onClick={() => setRegisterActive(true)} className={`option-form ${registerActive ? "optionform-active" : ""}`}>Register</div>
@@ -52,9 +53,20 @@ const Login = () => {
                       </div>
                   </div>
                   </div>
-                  <button className='button-login' onClick={Auth}>Sign In</button>
+                  <div className="container-loginterms">
+                      <button className='button-login' onClick={Auth}>Sign In</button>
+                      <div className="container-terms">
+                          <p className='terms'>By signing up, you accept our</p>
+                           <span className='text-button'>Conditions</span>
+                      </div>
+                      <div className="container-terms">
+                          <p className='terms'>Have an account?</p>
+                          <span className='text-button'>Login</span>
+                      </div>
+                  </div>
               </form>
-        </div>
+          </div>
+          <Terms/>
     </div>
   )
 }
