@@ -1,5 +1,3 @@
-import React from 'react'
-
 const api =  {
     login: "http://localhost:5000/login",
     users: "http://localhost:5000/users",
