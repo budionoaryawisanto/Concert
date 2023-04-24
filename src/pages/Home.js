@@ -5,7 +5,7 @@ import '../style/pages/Home.css'
 const Home = () => {
   return (
     <div className='body'>
-      <Navbar addClass="d-none" />
+      <Navbar hideSearch="d-none" />
       <div className="container-hero">
         <div className="hero">
           <div className="header-hero">The Best experience of <span>Concert</span> in 2023</div>

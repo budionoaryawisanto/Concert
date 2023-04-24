@@ -47,3 +47,32 @@
 .button-hero:hover{
     transform: translateY(-5px);
 }
+
+@media screen and (max-width: 760px) {
+    .header-hero{
+        font-size: 64px;
+    }
+
+    .context-hero{
+        font-size: 18px;
+    }
+
+    .button-hero{
+        width: 108px;
+        height: 34px;
+        font-size: 13px;
+        line-height: 34px;
+    }
+}
+
+
+
+@media screen and (max-width: 506px) {
+    .header-hero{
+        font-size: 54px;
+    }
+
+    .context-hero{
+        font-size: 15px;
+    }
+}

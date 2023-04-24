@@ -16,7 +16,7 @@ const Navbar = (props) => {
       <div className="wrapper-search">
         <img src={kpopImg} alt="img" className='img-navbar' />
         <form action="/search" className='form-search'>
-            <div className={`search-box ${props.addClass}`}>
+            <div className={`search-box ${props.hideSearch}`}>
                 <img src={search} alt="search" width='30px' height="30px" className='search-button'/>
                 <input type="search" name="search" placeholder='Search here... ' id="search" />
             </div>
