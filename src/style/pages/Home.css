@@ -48,6 +48,39 @@
     transform: translateY(-5px);
 }
 
+.container-events{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 431px;
+    margin-top: 47px;
+    padding: 22px 76px;
+    gap: 3px;
+    border: 1px solid black;
+}
+
+.container-header{
+    display: flex;
+    width: 100%;
+    gap: 7px;
+    align-items: center;
+}
+
+.header-events{
+    font-size: 34px;
+    font-weight: 700;
+    color: black;
+}
+
+.header-events span{
+    color: #F87299;
+}
+
+.container-card{
+    width: 100%;
+    border: 1px solid black;
+}
+
 @media screen and (max-width: 760px) {
     .header-hero{
         font-size: 64px;
