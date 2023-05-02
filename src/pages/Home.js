@@ -1,10 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import '../style/pages/Home.css'
 import Navbar from '../components/Navbar'
 import axios from 'axios'
-import '../style/pages/Home.css'
 import api from '../models/api'
 import rightArrow from '../assets/icons/Right.png'
 import EventsCardDisplay from '../components/EventsCardDisplay.js'
+import tds from '../assets/images/tds.png'
+import bts from '../assets/images/bts.png'
+import blackpink from '../assets/images/blackpink.png'
 
 const Home = () => {
   const [events, setEvents] = useState([])
@@ -37,7 +40,9 @@ const Home = () => {
           <img src={rightArrow} alt="arrow" />
         </div>
         <div className="container-card">
-          <EventsCardDisplay/>
+            <EventsCardDisplay img={tds} location='ICE BSD Tangerang' date='05 - 07 Mei 2023' title='TDS 2' subtitle='The Dream Show In Jakarta' price='IDR 1.200.000' />
+            <EventsCardDisplay img={bts} location='ICE BSD Tangerang' date='24 - 25 September 2023' title='BE THE SUN' subtitle='World Tour Be The Sun Jakarta' price='IDR 1.200.000' />
+            <EventsCardDisplay img={blackpink} location='Gelora Bung Karno Main Stadium' date='16 - 18 Juni 2023' title='BORN PINK' subtitle='Born Pink World Tour Jakarta' price='IDR 1.300.000' />
         </div>
       </div>
     </div>
