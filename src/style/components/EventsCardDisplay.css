@@ -3,12 +3,13 @@
     height: 419px;
     display: flex;
     flex-direction: column;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
     align-items: center;
     gap: 4px;
     padding: 11.5px 13px;
     border-radius: 24px;
     background-color: #eceaea;
-    float: left;
 }
 
 .img-card{
@@ -64,12 +65,4 @@
     font-size: 12px;
     color: black;
     font-weight: 700;
-}
-
-
-@media screen and (max-width: 1080px) {
-    .card{
-        float: left;
-        margin: 10px;
-    }
 }

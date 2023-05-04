@@ -55,7 +55,6 @@
     margin-top: 47px;
     padding: 22px 76px;
     gap: 3px;
-    border: 1px solid black;
 }
 
 .container-header{
@@ -79,9 +78,28 @@
 
 .container-card{
     display: flex;
-    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     gap: 20px;
-    border: 1px solid black;
+    margin-top: 10px;
+    padding: 25px 20px;
+}
+
+.container-card::-webkit-scrollbar {
+  height: 12px;
+}
+
+.container-card::-webkit-scrollbar-thumb,
+.container-card::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.container-card::-webkit-scrollbar-thumb {
+  background: #F87299;
+}
+
+.container-card::-webkit-scrollbar-track {
+  background: #edf2f4;
 }
 
 
@@ -89,14 +107,9 @@
     .container-events{
         padding: 22px 0px;
     }
-
-    .container-card{
-        display: block;
-    }
-
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .header-hero{
         font-size: 64px;
     }
@@ -117,7 +130,7 @@
 
 @media screen and (max-width: 506px) {
     .header-hero{
-        font-size: 54px;
+        font-size: 44px;
     }
 
     .context-hero{

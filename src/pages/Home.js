@@ -8,6 +8,7 @@ import EventsCardDisplay from '../components/EventsCardDisplay.js'
 import tds from '../assets/images/tds.png'
 import bts from '../assets/images/bts.png'
 import blackpink from '../assets/images/blackpink.png'
+import Footer from '../components/Footer'
 
 const Home = () => {
   const [events, setEvents] = useState([])
@@ -45,6 +46,7 @@ const Home = () => {
             <EventsCardDisplay img={blackpink} location='Gelora Bung Karno Main Stadium' date='16 - 18 Juni 2023' title='BORN PINK' subtitle='Born Pink World Tour Jakarta' price='IDR 1.300.000' />
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }
