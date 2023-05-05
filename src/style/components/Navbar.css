@@ -127,15 +127,6 @@ nav{
     .account{
         width: 100px;
     }
-
-    .wrapper-search{
-        width: 80%;
-        gap: 20px;
-    }
-
-    .search-box{
-        width: 45vw;
-    }
 }
 
 @media screen and (max-width: 760px) {
@@ -144,18 +135,7 @@ nav{
         gap: 10px;
     }
 
-    .search-box{
-        width: 50vw;
-    }
-
     .toggle-button{
         margin-right: 30px;
-    }
-}
-
-
-@media screen and (max-width: 450px) {
-    .search-box{
-        display: none;
     }
 }

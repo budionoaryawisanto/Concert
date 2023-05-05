@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../style/pages/Home.css'
 import Navbar from '../components/Navbar'
-import axios from 'axios'
-import api from '../models/api'
 import rightArrow from '../assets/icons/Right.png'
 import EventsCardDisplay from '../components/EventsCardDisplay.js'
 import tds from '../assets/images/tds.png'
@@ -11,23 +9,9 @@ import blackpink from '../assets/images/blackpink.png'
 import Footer from '../components/Footer'
 
 const Home = () => {
-  const [events, setEvents] = useState([])
-
-  useEffect(() => {
-    GetEvents()
-  }, [])
-
-  const GetEvents = async () => {
-    try {
-      const response = await axios.create().get(api.events)
-      setEvents(response.data)
-    } catch (error) {
-    }
-  }
-
   return (
     <div className='body'>
-      <Navbar hideSearch="d-none" />
+      <Navbar/>
       <div className="container-hero">
         <div className="hero">
           <div className="header-hero">The Best experience of <span>Concert</span> in 2023</div>
