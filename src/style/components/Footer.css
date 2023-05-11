@@ -6,6 +6,7 @@ footer{
     padding-top: 36px;
     padding-left: 60px;
     background-color: black;
+    clear: both;
 }
 
 .container-item{

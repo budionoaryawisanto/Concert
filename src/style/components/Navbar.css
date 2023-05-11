@@ -27,30 +27,6 @@ nav{
     align-items: start;
 }
 
-.wrapper-search{
-    display: flex;
-    width: 60%;
-    gap: 27px;
-    align-items: center;
-}
-
-.search-box{
-    display: flex;
-    width: 35vw;
-    height: 42px;
-    background-color: white;
-    align-items: center;
-    border-radius: 12px;
-    padding: 0px 10px;
-}
-
-.search-box input {
-    width: 100%;
-    height: 42px;
-    background-color: white;
-    color: black;
-}
-
 .wrapper-nav-button{
     height: 74px;
     display: flex;
@@ -110,7 +86,7 @@ nav{
       flex-direction: column;
       align-items: flex-start;
       gap: 0;
-      top: 120px;
+      top: 110px;
       left: 0;
       right: 0;
       overflow-x: hidden;

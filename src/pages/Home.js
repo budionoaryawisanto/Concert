@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../style/pages/Home.css'
 import Navbar from '../components/Navbar'
 import rightArrow from '../assets/icons/Right.png'
@@ -9,6 +10,8 @@ import blackpink from '../assets/images/blackpink.png'
 import Footer from '../components/Footer'
 
 const Home = () => {
+  const navigate = useNavigate()
+
   return (
     <div className='body'>
       <Navbar/>
@@ -20,7 +23,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container-events">
-        <div className="container-header">
+        <div onClick={() => navigate('/events')} className="container-header">
           <p className="header-events"><span>Explore</span> By Event</p>
           <img src={rightArrow} alt="arrow" />
         </div>

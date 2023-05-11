@@ -1,4 +1,5 @@
-const api =  {
+const api = {
+    server: "http://localhost:5000",
     login: "http://localhost:5000/login",
     users: "http://localhost:5000/users",
     token: "http://localhost:5000/token",

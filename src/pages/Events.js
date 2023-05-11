@@ -7,12 +7,13 @@ import api from '../models/api.js'
 import search from '../assets/icons/search.png'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import CardsEvents from '../components/CardsEvents'
 
 const Events = () => {
     const [events, setEvents] = useState([])
 
     useEffect(() => {
-        GetEvents()
+      GetEvents()
     }, [])
 
     const GetEvents = async () => {
@@ -23,7 +24,7 @@ const Events = () => {
         }
   }
   return (
-    <div className='body'>
+    <div className='body bg-grey'>
       <Navbar/>
       <div className="container-search">
         <form action="/search" className='form-search'>
@@ -33,7 +34,11 @@ const Events = () => {
             </div>
         </form>
       </div>
-      <div className="container-item"></div>
+      <div className="container-events-cards">
+         {events.map((e, index) => {
+           return <CardsEvents key={index} img={e.image} title={e.title} location={e.location} place={e.place} date={e.date} price={e.regularPrice}/>
+        })}
+      </div>
       <Footer/>
     </div>
   )
