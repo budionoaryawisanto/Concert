@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
+import DetailCards from "./components/DetailCards";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/events" element={<Events/>} />
         <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/detailEvents" element={<DetailCards/>} />
       </Routes>
     </BrowserRouter>
   );

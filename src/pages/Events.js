@@ -11,6 +11,7 @@ import CardsEvents from '../components/CardsEvents'
 
 const Events = () => {
     const [events, setEvents] = useState([])
+    const [records, setRecords] = useState([])
 
     useEffect(() => {
       GetEvents()
@@ -20,23 +21,29 @@ const Events = () => {
         try {
             const response = await axios.create().get(api.events)
             setEvents(response.data)
+            setRecords(response.data)
         } catch (error) {
         }
   }
+
+    const Search = (event) => {
+      setRecords(events.filter(e => e.title.toLowerCase().includes(event.target.value)))
+    }
+
   return (
     <div className='body bg-grey'>
       <Navbar/>
       <div className="container-search">
-        <form action="/search" className='form-search'>
+        <div className='form-search'>
             <div className='search-box'>
                 <img src={search} alt="search" width='30px' height="30px" className='search-button'/>
-                <input type="search" name="search" placeholder='Search here... ' id="search" />
+                <input onChange={Search} placeholder='Search here... ' id="search" />
             </div>
-        </form>
+        </div>
       </div>
       <div className="container-events-cards">
-         {events.map((e, index) => {
-           return <CardsEvents key={index} img={e.image} title={e.title} location={e.location} place={e.place} date={e.date} price={e.regularPrice}/>
+         {records.map((e, index) => {
+           return <CardsEvents data={e} key={index} img={e.image} title={e.title} location={e.location} place={e.place} date={e.date} price={e.regularPrice}/>
         })}
       </div>
       <Footer/>
